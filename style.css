@@ -14,6 +14,11 @@ body {
     color: #fff !important;
 }
 
+.hero-page .text-primary,
+.hero-page .bg-primary .text-on-primary {
+    color: #111 !important;
+}
+
 #ai-projects,
 #management,
 footer {
