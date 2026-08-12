@@ -9,8 +9,27 @@ body {
     color: #000;
 }
 
-[class*="text-"] {
-    color: #000 !important;
+.hero-page,
+.hero-page * {
+    color: #000;
+}
+
+#ai-projects,
+#management,
+footer {
+    color: #fff;
+}
+
+#ai-projects [class*="text-"],
+#management [class*="text-"],
+footer [class*="text-"] {
+    color: inherit !important;
+}
+
+#ai-projects a,
+#management a,
+footer a {
+    color: #c0c1ff;
 }
 
 /* Particle Background Effect */
