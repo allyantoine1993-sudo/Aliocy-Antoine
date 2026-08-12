@@ -5,6 +5,14 @@
     font-variation-settings: 'FILL' 1;
 }
 
+body {
+    color: #000;
+}
+
+[class*="text-"] {
+    color: #000 !important;
+}
+
 /* Particle Background Effect */
 .hero-bg {
     background-image: 
