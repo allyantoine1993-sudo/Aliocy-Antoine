@@ -51,3 +51,27 @@
 .ai-pulse {
     animation: pulse-opacity 2s infinite ease-in-out;
 }
+
+/* Mobile tweaks */
+@media (max-width: 767px) {
+    /* Reduce hero height on small screens for better fold */
+    .min-h-[80vh] {
+        min-height: 60vh !important;
+    }
+
+    /* Bigger tap targets */
+    .font-code-sm, .font-body-sm, .font-body-md {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Mobile menu smooth appearance */
+    #mobile-menu {
+        transform-origin: top;
+        transition: transform 180ms ease, opacity 180ms ease;
+    }
+}
+
+/* Ensure overlays hide scroll when open */
+.overflow-hidden {
+    overflow: hidden !important;
+}

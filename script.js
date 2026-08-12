@@ -91,12 +91,34 @@ if (window.tailwind && window.tailwind.config) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const menuButton = document.querySelector("button.md\:hidden");
-    if (!menuButton) return;
+    const mobileButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (!mobileButton || !mobileMenu) return;
 
-    menuButton.addEventListener("click", function () {
-        const navLinks = document.querySelector(".md\:flex");
-        if (!navLinks) return;
-        navLinks.classList.toggle("hidden");
+    mobileButton.addEventListener("click", function () {
+        const expanded = mobileButton.getAttribute("aria-expanded") === "true";
+        mobileButton.setAttribute("aria-expanded", String(!expanded));
+        mobileMenu.classList.toggle("hidden");
+        // toggle body scroll when menu open
+        document.documentElement.classList.toggle("overflow-hidden");
+    });
+
+    // Close mobile menu on navigation link click
+    mobileMenu.addEventListener("click", function (e) {
+        const target = e.target.closest("a");
+        if (!target) return;
+        mobileMenu.classList.add("hidden");
+        mobileButton.setAttribute("aria-expanded", "false");
+        document.documentElement.classList.remove("overflow-hidden");
+    });
+
+    // Close on Escape
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && !mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+            mobileButton.setAttribute("aria-expanded", "false");
+            document.documentElement.classList.remove("overflow-hidden");
+            mobileButton.focus();
+        }
     });
 });
