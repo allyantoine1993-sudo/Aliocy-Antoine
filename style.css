@@ -6,18 +6,18 @@
 }
 
 body {
-    color: #000;
+    color: #fff;
 }
 
 .hero-page,
 .hero-page * {
-    color: #000;
+    color: #fff !important;
 }
 
 #ai-projects,
 #management,
 footer {
-    color: #fff;
+    color: #fff !important;
 }
 
 #ai-projects [class*="text-"],
