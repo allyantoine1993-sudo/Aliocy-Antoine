@@ -10,7 +10,7 @@
     background-image: 
         radial-gradient(circle at 15% 50%, rgba(192, 193, 255, 0.05) 0%, transparent 50%),
         radial-gradient(circle at 85% 30%, rgba(76, 215, 246, 0.05) 0%, transparent 50%),
-        url('Ally1.jpeg');
+        url('ally.jpeg');
     background-size: auto, auto, cover;
     background-position: 15% 50%, 85% 30%, center;
     background-repeat: no-repeat;
