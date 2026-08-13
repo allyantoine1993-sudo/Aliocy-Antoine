@@ -1,180 +1,921 @@
+<!-- Aliocy Antoine | Comprehensive Portfolio -->
 <!DOCTYPE html>
-<html class="dark scroll-smooth" lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Aliocy Antoine - Portfolio</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aliocy Antoine - Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#494bd6",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "surface-tint": "#c0c1ff",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#233147",
+                        "surface-container-high": "#222a3d",
+                        "secondary-fixed-dim": "#b9c7e3",
+                        "outline": "#908fa0",
+                        "on-primary-container": "#0d0096",
+                        "on-primary": "#1000a9",
+                        "secondary-fixed": "#d5e3ff",
+                        "surface": "#0b1326",
+                        "on-secondary-fixed": "#0d1c31",
+                        "surface-dim": "#0b1326",
+                        "inverse-surface": "#dae2fd",
+                        "primary-fixed": "#e1e0ff",
+                        "on-secondary-container": "#abb9d5",
+                        "background": "#0b1326",
+                        "on-background": "#dae2fd",
+                        "tertiary-container": "#009eb9",
+                        "surface-container-lowest": "#060e20",
+                        "surface-container": "#171f33",
+                        "on-tertiary-fixed": "#001f26",
+                        "error-container": "#93000a",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "on-surface-variant": "#c7c4d7",
+                        "secondary": "#b9c7e3",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "on-secondary-fixed-variant": "#39475e",
+                        "surface-bright": "#31394d",
+                        "outline-variant": "#464554",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005",
+                        "tertiary": "#4cd7f6",
+                        "tertiary-fixed": "#acedff",
+                        "on-tertiary-container": "#002f38",
+                        "on-primary-fixed": "#07006c",
+                        "surface-variant": "#2d3449",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "surface-container-low": "#131b2e",
+                        "on-tertiary": "#003640",
+                        "secondary-container": "#3c4a61",
+                        "surface-container-highest": "#2d3449",
+                        "on-surface": "#dae2fd",
+                        "primary-container": "#8083ff",
+                        "inverse-on-surface": "#283044",
+                        "primary": "#c0c1ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "code-sm": ["JetBrains Mono"],
+                        "body-sm": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-caps": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "code-sm": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Particle Background Effect */
+        .hero-bg {
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(192, 193, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(76, 215, 246, 0.05) 0%, transparent 50%);
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .hero-grid {
+            background-image: 
+                linear-gradient(to right, rgba(144, 143, 160, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(144, 143, 160, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+        }
+
+        /* Glass Card Hover */
+        .glass-card {
+            background: rgba(34, 42, 61, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(144, 143, 160, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(192, 193, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 20px rgba(192, 193, 255, 0.05);
+            transform: translateY(-4px);
+        }
+
+        .project-card {
+            border-top: 2px solid #c0c1ff;
+        }
+
+        /* AI Indicator Pulse */
+        @keyframes pulse-opacity {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .ai-pulse {
+            animation: pulse-opacity 2s infinite ease-in-out;
+        }
+    </style>
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
-    <!-- TopNavBar -->
-    <nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md shadow-sm border-b border-outline-variant/20">
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20 flex justify-between items-center">
-            <a class="font-headline-lg text-headline-lg text-primary tracking-tight" href="#">Aliocy Antoine</a>
-            <div id="desktop-nav-links" class="hidden md:flex gap-8 items-center">
-                <a class="text-primary font-bold border-b-2 border-primary pb-1 active:scale-95 transition-transform hover:text-primary transition-colors duration-300" href="#">Home</a>
-                <a class="text-on-surface-variant font-medium active:scale-95 transition-transform hover:text-primary transition-colors duration-300" href="#ai-projects">AI Projects</a>
-                <a class="text-on-surface-variant font-medium active:scale-95 transition-transform hover:text-primary transition-colors duration-300" href="#management">Management</a>
-                <a class="text-on-surface-variant font-medium active:scale-95 transition-transform hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
-            </div>
-            <button id="resume-button" class="hidden md:flex bg-primary text-on-primary px-6 py-2 rounded font-code-sm text-code-sm hover:shadow-[0_0_15px_rgba(76,215,246,0.3)] transition-all">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md shadow-sm border-b border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20 flex justify-between items-center">
+<a class="font-headline-lg text-headline-lg text-primary tracking-tight" href="#">Aliocy Antoine</a>
+<div class="hidden md:flex gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 active:scale-95 transition-transform hover:text-primary transition-colors duration-300" href="#">Home</a>
+<a class="text-on-surface-variant font-medium active:scale-95 transition-transform hover:text-primary transition-colors duration-300" href="#ai-projects">AI Projects</a>
+<a class="text-on-surface-variant font-medium active:scale-95 transition-transform hover:text-primary transition-colors duration-300" href="#management">Management</a>
+<a class="text-on-surface-variant font-medium active:scale-95 transition-transform hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<button class="hidden md:flex bg-primary text-on-primary px-6 py-2 rounded font-code-sm text-code-sm hover:shadow-[0_0_15px_rgba(76,215,246,0.3)] transition-all">
                 Resume
             </button>
-            <!-- Mobile Menu Toggle -->
-            <button id="mobile-menu-button" class="md:hidden text-on-surface-variant hover:text-primary transition-colors p-2 rounded" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="material-symbols-outlined" data-icon="menu">menu</span>
-            </button>
-        </div>
-        <!-- Mobile menu (hidden on desktop) -->
-        <div id="mobile-menu" class="md:hidden hidden bg-background/95 backdrop-blur-md border-t border-outline-variant/10">
-            <div class="px-6 py-4 flex flex-col gap-3">
-                <a class="py-3 px-2 text-primary font-semibold rounded hover:bg-surface-variant" href="#">Home</a>
-                <a class="py-3 px-2 text-on-surface-variant rounded hover:bg-surface-variant" href="#ai-projects">AI Projects</a>
-                <a class="py-3 px-2 text-on-surface-variant rounded hover:bg-surface-variant" href="#management">Management</a>
-                <a class="py-3 px-2 text-on-surface-variant rounded hover:bg-surface-variant" href="#contact">Contact</a>
-                <a class="mt-2 inline-flex items-center justify-center bg-primary text-on-primary px-4 py-2 rounded font-code-sm" href="#">Resume</a>
-            </div>
-        </div>
-        </div>
-    </nav>
-    <!-- Main Content -->
-    <main class="flex-grow pt-20">
-        <!-- Hero Section -->
-        <section class="hero-page relative min-h-[80vh] flex items-center pt-20 pb-32">
-            <div class="hero-bg"></div>
-            <div class="hero-grid"></div>
-            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full relative z-10">
-                <div class="grid grid-cols-4 md:grid-cols-12 gap-gutter items-center">
-                    <div class="col-span-4 md:col-span-8 flex flex-col gap-6">
-                        <div class="flex items-center gap-2">
-                            <span class="inline-block w-2 h-2 rounded-full bg-tertiary ai-pulse shadow-[0_0_8px_#4cd7f6]"></span>
-                            <span class="font-label-caps text-label-caps text-tertiary">SYSTEM ONLINE // AGENT INITIALIZED</span>
-                        </div>
-                        <h1 class="font-headline-xl text-headline-xl text-on-background">
-                            Aliocy Antoine:<br />
-                            <span class="text-primary">Bridging Service Management &amp; Artificial Intelligence</span>
-                        </h1>
-                        <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center pt-20 pb-32">
+<div class="hero-bg"></div>
+<div class="hero-grid"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full relative z-10">
+<div class="grid grid-cols-4 md:grid-cols-12 gap-gutter items-center">
+<div class="col-span-4 md:col-span-8 flex flex-col gap-6">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary ai-pulse shadow-[0_0_8px_#4cd7f6]"></span>
+<span class="font-label-caps text-label-caps text-tertiary">SYSTEM ONLINE // AGENT INITIALIZED</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-background">
+                            Aliocy Antoine:<br/>
+<span class="text-primary">Civil Engineer &amp; AI Strategist: Bridging Technical Rigor with Artificial Intelligence</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
                             Current student at Tzu Chi University specializing in AI Agent creation and LLM fine-tuning via LoRA architecture. Fusing technical precision with hospitality excellence to build intelligent, human-centric systems.
                         </p>
-                        <div class="flex flex-wrap gap-4 mt-4">
-                            <a class="bg-primary text-on-primary px-6 py-3 rounded hover:shadow-[0_0_15px_rgba(76,215,246,0.3)] transition-all font-code-sm text-code-sm inline-flex items-center gap-2" href="#ai-projects">
-                                <span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+<div class="flex flex-wrap gap-4 mt-4">
+<a class="bg-primary text-on-primary px-6 py-3 rounded hover:shadow-[0_0_15px_rgba(76,215,246,0.3)] transition-all font-code-sm text-code-sm inline-flex items-center gap-2" href="#ai-projects">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
                                 View AI Projects
                             </a>
-                            <a class="border border-outline text-on-surface px-6 py-3 rounded hover:bg-surface-variant hover:border-primary transition-colors font-code-sm text-code-sm inline-flex items-center gap-2 bg-transparent" href="#">
-                                <span class="material-symbols-outlined" data-icon="download">download</span>
+<a class="border border-outline text-on-surface px-6 py-3 rounded hover:bg-surface-variant hover:border-primary transition-colors font-code-sm text-code-sm inline-flex items-center gap-2 bg-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="download">download</span>
                                 Download Resume
                             </a>
-                        </div>
-                    </div>
-                    <div class="hidden md:block col-span-4 flex justify-end">
-                        <div class="relative w-full aspect-square rounded-lg overflow-hidden border border-outline-variant/30 glass-card">
-                            <img class="object-cover w-full h-full opacity-80 mix-blend-screen" data-alt="A highly detailed, cinematic photograph of a modern, glowing server rack or an abstract representation of a neural network in a sleek, minimalist tech environment. The lighting is high-contrast dark mode with intense electric indigo and cyan neon accents illuminating complex geometric nodes and pathways. The atmosphere feels like sophisticated artificial intelligence hardware meeting premium corporate architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs5fpbWVaxlOYCEPkC4lYiD7qOxVqmoRmWP_lz5r2F8gilMqnp7RdxjReByq3j_X_BFj_KqOMZlQavLf9SblkTxz7_jcbCajJSt7L_GET1Wvo4tkkfd8fytuG7xd_TIJWWOFm2gNAX7Y2gdbK8x1Jv3omnGrTt7ed2m_gvxtD86PnA1BnRkoz-5-B4Pm5gssL9wxJVRKwjLfZ84voE-K6oaT0OMPwbg58XRttYKZpHxo6FMMZrfwU8" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- AI Research Showcase -->
-        <section class="py-24 bg-surface-container-lowest relative" id="ai-projects">
-            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-                <div class="mb-16">
-                    <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-4">AI Research Showcase</h2>
-                    <div class="w-16 h-1 bg-primary rounded-full"></div>
-                </div>
-                <div class="grid grid-cols-4 md:grid-cols-12 gap-gutter">
-                    <div class="col-span-4 md:col-span-12 glass-card rounded-xl p-8 project-card">
-                        <div class="flex flex-col md:flex-row gap-8 items-center">
-                            <div class="w-full md:w-1/2 rounded-lg overflow-hidden border border-outline-variant/20 relative aspect-video">
-                                <div class="bg-cover bg-center w-full h-full opacity-70" data-alt="An intricate, generative digital art piece representing a Large Language Model architecture. It features a dense, glowing web of interconnected nodes and data streams in a dark void. High-key electric blue and cyan colors highlight specific active pathways, simulating a neural network processing information. The aesthetic is extremely polished, tech-forward, and abstract, resembling a high-end corporate AI visualization." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAU-v4CExZAZ-7EwjoIrw_f59iWlp_MhNfnJTA6kuQexYlQu7WR9xz3yxElyU6fRL6TIo1TblIqkLRBKjEmlGzcD6wqKvYOK01ZRuccVC-VXtMyWXTLFGVjNzp9yhIhStfJJpvCswGiW8dvMwS44U4VfvYoz4DqbMgCbV-T9fw9litCoQFCVSNzOrOoU6DuuY_15HNnWiCFzL96DB8iC0HqkC7C58GRd1htOLbGO0vOsDdKQWCPSSCa')"></div>
-                            </div>
-                            <div class="w-full md:w-1/2 flex flex-col gap-4">
-                                <span class="font-label-caps text-label-caps text-tertiary border border-tertiary/30 px-3 py-1 rounded-full self-start bg-tertiary/10">LoRA ARCHITECTURE</span>
-                                <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-background">Custom LLMs via Fine-tuning</h3>
-                                <p class="font-body-sm text-body-sm text-on-surface-variant">
+</div>
+</div>
+<div class="hidden md:block col-span-4 flex justify-end">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden border border-outline-variant/30 glass-card">
+<img class="object-cover w-full h-full opacity-80 mix-blend-screen" data-alt="A highly detailed, cinematic photograph of a modern, glowing server rack or an abstract representation of a neural network in a sleek, minimalist tech environment. The lighting is high-contrast dark mode with intense electric indigo and cyan neon accents illuminating complex geometric nodes and pathways. The atmosphere feels like sophisticated artificial intelligence hardware meeting premium corporate architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs5fpbWVaxlOYCEPkC4lYiD7qOxVqmoRmWP_lz5r2F8gilMqnp7RdxjReByq3j_X_BFj_KqOMZlQavLf9SblkTxz7_jcbCajJSt7L_GET1Wvo4tkkfd8fytuG7xd_TIJWWOFm2gNAX7Y2gdbK8x1Jv3omnGrTt7ed2m_gvxtD86PnA1BnRkoz-5-B4Pm5gssL9wxJVRKwjLfZ84voE-K6oaT0OMPwbg58XRttYKZpHxo6FMMZrfwU8"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Research Showcase -->
+<section class="py-24 bg-surface-container-lowest relative" id="ai-projects">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-4">AI Research Showcase</h2>
+<div class="w-16 h-1 bg-primary rounded-full"></div>
+</div>
+<div class="grid grid-cols-4 md:grid-cols-12 gap-gutter">
+<!-- Featured Project -->
+<div class="col-span-4 md:col-span-12 glass-card rounded-xl p-8 project-card">
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="w-full md:w-1/2 rounded-lg overflow-hidden border border-outline-variant/20 relative aspect-video">
+<div class="bg-cover bg-center w-full h-full opacity-70" data-alt="An intricate, generative digital art piece representing a Large Language Model architecture. It features a dense, glowing web of interconnected nodes and data streams in a dark void. High-key electric blue and cyan colors highlight specific active pathways, simulating a neural network processing information. The aesthetic is extremely polished, tech-forward, and abstract, resembling a high-end corporate AI visualization." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAU-v4CExZAZ-7EwjoIrw_f59iWlp_MhNfnJTA6kuQexYlQu7WR9xz3yxElyU6fRL6TIo1TblIqkLRBKjEmlGzcD6wqKvYOK01ZRuccVC-VXtMyWXTLFGVjNzp9yhIhStfJJpvCswGiW8dvMwS44U4VfvYoz4DqbMgCbV-T9fw9litCoQFCVSNzOrOoU6DuuY_15HNnWiCFzL96DB8iC0HqkC7C58GRd1htOLbGO0vOsDdKQWCPSSCa')"></div>
+</div>
+<div class="w-full md:w-1/2 flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-tertiary border border-tertiary/30 px-3 py-1 rounded-full self-start bg-tertiary/10">LoRA ARCHITECTURE</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-background">Custom LLMs via Fine-tuning</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
                                     Developing specialized "AI Agent Expert" personas utilizing Low-Rank Adaptation (LoRA) for efficient model fine-tuning. This architecture allows for rapid iteration of domain-specific knowledge while minimizing computational overhead.
                                 </p>
-                                <ul class="flex flex-col gap-2 mt-2 font-code-sm text-code-sm text-on-surface-variant">
-                                    <li class="flex items-center gap-2"><span class="text-primary">+</span> Parameter-efficient tuning strategies</li>
-                                    <li class="flex items-center gap-2"><span class="text-primary">+</span> Contextual memory orchestration</li>
-                                    <li class="flex items-center gap-2"><span class="text-primary">+</span> Persona consistency alignment</li>
-                                </ul>
-                                <a class="text-primary hover:text-tertiary transition-colors mt-4 inline-flex items-center gap-1 font-code-sm text-code-sm" href="#">
+<ul class="flex flex-col gap-2 mt-2 font-code-sm text-code-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="text-primary">+</span> Parameter-efficient tuning strategies</li>
+<li class="flex items-center gap-2"><span class="text-primary">+</span> Contextual memory orchestration</li>
+<li class="flex items-center gap-2"><span class="text-primary">+</span> Persona consistency alignment</li>
+</ul>
+<a class="text-primary hover:text-tertiary transition-colors mt-4 inline-flex items-center gap-1 font-code-sm text-code-sm" href="#">
                                     View Repository <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Academic Background & Skills Grid -->
-        <section class="py-24 relative" id="management">
-            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-                <div class="grid grid-cols-4 md:grid-cols-12 gap-gutter">
-                    <div class="col-span-4 md:col-span-5 flex flex-col justify-center">
-                        <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-4">Academic Synthesis</h2>
-                        <div class="w-16 h-1 bg-primary rounded-full mb-8"></div>
-                        <div class="glass-card rounded-lg p-6 border-l-2 border-l-tertiary">
-                            <h3 class="font-body-md text-body-md font-bold text-on-background">Tzu Chi University</h3>
-                            <p class="font-code-sm text-code-sm text-tertiary mb-4">International Service Industry Management</p>
-                            <p class="font-body-sm text-body-sm text-on-surface-variant">
-                                Bridging the gap between human-centric service excellence and automated technical solutions. The curriculum emphasizes a unique perspective where AI acts as a deeply integrated service facilitator rather than just a standalone tool.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-span-4 md:col-span-7 grid grid-cols-2 gap-4 mt-8 md:mt-0">
-                        <div class="glass-card rounded-lg p-6 flex flex-col gap-3">
-                            <span class="material-symbols-outlined text-primary text-3xl mb-2" data-icon="hub">hub</span>
-                            <h4 class="font-code-sm text-code-sm text-on-background">AI Agent Orchestration</h4>
-                            <p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Designing autonomous systems.</p>
-                        </div>
-                        <div class="glass-card rounded-lg p-6 flex flex-col gap-3">
-                            <span class="material-symbols-outlined text-tertiary text-3xl mb-2" data-icon="model_training">model_training</span>
-                            <h4 class="font-code-sm text-code-sm text-on-background">LoRA Fine-tuning</h4>
-                            <p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Efficient model adaptation.</p>
-                        </div>
-                        <div class="glass-card rounded-lg p-6 flex flex-col gap-3">
-                            <span class="material-symbols-outlined text-secondary text-3xl mb-2" data-icon="architecture">architecture</span>
-                            <h4 class="font-code-sm text-code-sm text-on-background">System Architecture</h4>
-                            <p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Scalable deployment design.</p>
-                        </div>
-                        <div class="glass-card rounded-lg p-6 flex flex-col gap-3 bg-primary-container/10">
-                            <span class="material-symbols-outlined text-primary text-3xl mb-2" data-icon="handshake">handshake</span>
-                            <h4 class="font-code-sm text-code-sm text-on-background">Service Excellence</h4>
-                            <p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Human-centric UX focus.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <!-- Footer -->
-    <footer class="bg-surface-container-lowest w-full py-12 border-t border-outline-variant/10 flat no shadows mt-auto" id="contact">
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter">
-            <div class="font-label-caps text-label-caps text-on-surface-variant">
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Academic Background & Skills Grid -->
+<section class="py-24 relative" id="management">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-4 md:grid-cols-12 gap-gutter">
+<!-- Academic Context -->
+<div class="col-span-4 md:col-span-5 flex flex-col justify-center">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-4">Academic Synthesis</h2>
+<div class="w-16 h-1 bg-primary rounded-full mb-8"></div>
+<div class="glass-card rounded-lg p-6 border-l-2 border-l-tertiary">
+<h3 class="font-body-md text-body-md font-bold text-on-background">Tzu Chi University</h3>
+<p class="font-code-sm text-code-sm text-tertiary mb-4">International Service Industry Management</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bridging the gap between human-centric service excellence and automated technical solutions. My studies focus on Management, advanced Excel data modeling, and Leadership, providing a unique perspective where AI acts as a deeply integrated service facilitator.</p>
+</div><div class="glass-card rounded-lg p-6 border-l-2 border-l-primary mt-4"><h3 class="font-body-md text-body-md font-bold text-on-background">Engineering Foundations</h3><p class="font-code-sm text-code-sm text-primary mb-4">Degree in Civil Engineering</p><p class="font-body-sm text-body-sm text-on-surface-variant">Providing the technical rigor and structural problem-solving framework that underpins my current focus on AI systems and management optimization.</p></div>
+</div>
+<!-- Skills Bento -->
+<div class="col-span-4 md:col-span-7 grid grid-cols-2 gap-4 mt-8 md:mt-0">
+<div class="glass-card rounded-lg p-6 flex flex-col gap-3">
+<span class="material-symbols-outlined text-primary text-3xl mb-2" data-icon="hub">hub</span>
+<h4 class="font-code-sm text-code-sm text-on-background">AI Agent Orchestration</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Designing autonomous systems.</p>
+</div>
+<div class="glass-card rounded-lg p-6 flex flex-col gap-3">
+<span class="material-symbols-outlined text-tertiary text-3xl mb-2" data-icon="model_training">model_training</span>
+<h4 class="font-code-sm text-code-sm text-on-background">LoRA Fine-tuning</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Efficient model adaptation.</p>
+</div>
+<div class="glass-card rounded-lg p-6 flex flex-col gap-3">
+<span class="material-symbols-outlined text-secondary text-3xl mb-2" data-icon="architecture">architecture</span>
+<h4 class="font-code-sm text-code-sm text-on-background">System Architecture</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Scalable deployment design.</p>
+</div>
+<div class="glass-card rounded-lg p-6 flex flex-col gap-3 bg-primary-container/10"><span class="material-symbols-outlined text-primary text-3xl mb-2" data-icon="leaderboard">leaderboard</span><h4 class="font-code-sm text-code-sm text-on-background">Leadership &amp; Excel</h4><p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Strategic management &amp; data modeling.</p></div>
+</div><div class="col-span-4 md:col-span-12 mt-12"><h3 class="font-label-caps text-label-caps text-tertiary mb-6">GLOBAL COMMUNICATION</h3><div class="grid grid-cols-2 md:grid-cols-5 gap-4"><div class="glass-card p-4 rounded-lg text-center"><div class="text-headline-lg mb-1">🇺🇸</div><div class="font-code-sm text-on-background">English</div><div class="text-xs text-tertiary">Native/Fluent</div></div><div class="glass-card p-4 rounded-lg text-center"><div class="text-headline-lg mb-1">🇭🇹</div><div class="font-code-sm text-on-background">Haitian Creole</div><div class="text-xs text-tertiary">Native/Fluent</div></div><div class="glass-card p-4 rounded-lg text-center"><div class="text-headline-lg mb-1">🇫🇷</div><div class="font-code-sm text-on-background">French</div><div class="text-xs text-tertiary">Native/Fluent</div></div><div class="glass-card p-4 rounded-lg text-center"><div class="text-headline-lg mb-1">🇪🇸</div><div class="font-code-sm text-on-background">Spanish</div><div class="text-xs text-tertiary">Native/Fluent</div></div><div class="glass-card p-4 rounded-lg text-center"><div class="text-headline-lg mb-1">🇨🇳</div><div class="font-code-sm text-on-background">Chinese</div><div class="text-xs text-tertiary">Intermediate</div></div></div></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-12 border-t border-outline-variant/10 flat no shadows mt-auto" id="contact">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="font-label-caps text-label-caps text-on-surface-variant">
                 © 2024 Aliocy Antoine • Tzu Chi University
             </div>
-            <div class="flex flex-col md:flex-row gap-4 md:gap-6 text-on-surface-variant">
-                <a class="font-body-sm text-body-sm bg-primary text-on-primary rounded-full px-4 py-2 hover:bg-primary-container transition-colors inline-flex items-center gap-2" href="mailto:allyantoine1993@gmail.com">
-                    <span class="material-symbols-outlined">email</span>
-                    Email Me
+<div class="flex gap-6">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-tertiary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center gap-1" href="#">
+                    LinkedIn
                 </a>
-                <a class="font-body-sm text-body-sm bg-surface-hover text-on-background rounded-full px-4 py-2 hover:bg-surface-variant transition-colors inline-flex items-center gap-2" href="tel:0965464454">
-                    <span class="material-symbols-outlined">phone</span>
-                    Call 0965464454
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-tertiary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center gap-1" href="#">
+                    GitHub
                 </a>
-                <a class="font-body-sm text-body-sm bg-surface-hover text-on-background rounded-full px-4 py-2 hover:bg-surface-variant transition-colors inline-flex items-center gap-2" href="https://instagram.com/aliocyantoine" target="_blank" rel="noreferrer noopener">
-                    <span class="material-symbols-outlined">photo_camera</span>
-                    Message on Instagram
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-tertiary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center gap-1" href="#">
+                    Built with AI
                 </a>
+</div>
+</div>
+</footer>
+</body></html>
+
+<!-- Aliocy Antoine | Portfolio Home -->
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aliocy Antoine - Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#494bd6",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "surface-tint": "#c0c1ff",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#233147",
+                        "surface-container-high": "#222a3d",
+                        "secondary-fixed-dim": "#b9c7e3",
+                        "outline": "#908fa0",
+                        "on-primary-container": "#0d0096",
+                        "on-primary": "#1000a9",
+                        "secondary-fixed": "#d5e3ff",
+                        "surface": "#0b1326",
+                        "on-secondary-fixed": "#0d1c31",
+                        "surface-dim": "#0b1326",
+                        "inverse-surface": "#dae2fd",
+                        "primary-fixed": "#e1e0ff",
+                        "on-secondary-container": "#abb9d5",
+                        "background": "#0b1326",
+                        "on-background": "#dae2fd",
+                        "tertiary-container": "#009eb9",
+                        "surface-container-lowest": "#060e20",
+                        "surface-container": "#171f33",
+                        "on-tertiary-fixed": "#001f26",
+                        "error-container": "#93000a",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "on-surface-variant": "#c7c4d7",
+                        "secondary": "#b9c7e3",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "on-secondary-fixed-variant": "#39475e",
+                        "surface-bright": "#31394d",
+                        "outline-variant": "#464554",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005",
+                        "tertiary": "#4cd7f6",
+                        "tertiary-fixed": "#acedff",
+                        "on-tertiary-container": "#002f38",
+                        "on-primary-fixed": "#07006c",
+                        "surface-variant": "#2d3449",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "surface-container-low": "#131b2e",
+                        "on-tertiary": "#003640",
+                        "secondary-container": "#3c4a61",
+                        "surface-container-highest": "#2d3449",
+                        "on-surface": "#dae2fd",
+                        "primary-container": "#8083ff",
+                        "inverse-on-surface": "#283044",
+                        "primary": "#c0c1ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "code-sm": ["JetBrains Mono"],
+                        "body-sm": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-caps": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "code-sm": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Particle Background Effect */
+        .hero-bg {
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(192, 193, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(76, 215, 246, 0.05) 0%, transparent 50%);
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .hero-grid {
+            background-image: 
+                linear-gradient(to right, rgba(144, 143, 160, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(144, 143, 160, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+        }
+
+        /* Glass Card Hover */
+        .glass-card {
+            background: rgba(34, 42, 61, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(144, 143, 160, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(192, 193, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 20px rgba(192, 193, 255, 0.05);
+            transform: translateY(-4px);
+        }
+
+        .project-card {
+            border-top: 2px solid #c0c1ff;
+        }
+
+        /* AI Indicator Pulse */
+        @keyframes pulse-opacity {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .ai-pulse {
+            animation: pulse-opacity 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md shadow-sm border-b border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20 flex justify-between items-center">
+<a class="font-headline-lg text-headline-lg text-primary tracking-tight" href="#">Aliocy Antoine</a>
+<div class="hidden md:flex gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 active:scale-95 transition-transform hover:text-primary transition-colors duration-300" href="#">Home</a>
+<a class="text-on-surface-variant font-medium active:scale-95 transition-transform hover:text-primary transition-colors duration-300" href="#ai-projects">AI Projects</a>
+<a class="text-on-surface-variant font-medium active:scale-95 transition-transform hover:text-primary transition-colors duration-300" href="#management">Management</a>
+<a class="text-on-surface-variant font-medium active:scale-95 transition-transform hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<button class="hidden md:flex bg-primary text-on-primary px-6 py-2 rounded font-code-sm text-code-sm hover:shadow-[0_0_15px_rgba(76,215,246,0.3)] transition-all">
+                Resume
+            </button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center pt-20 pb-32">
+<div class="hero-bg"></div>
+<div class="hero-grid"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full relative z-10">
+<div class="grid grid-cols-4 md:grid-cols-12 gap-gutter items-center">
+<div class="col-span-4 md:col-span-8 flex flex-col gap-6">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary ai-pulse shadow-[0_0_8px_#4cd7f6]"></span>
+<span class="font-label-caps text-label-caps text-tertiary">SYSTEM ONLINE // AGENT INITIALIZED</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-background">
+                            Aliocy Antoine:<br/>
+<span class="text-primary">Bridging Service Management &amp; Artificial Intelligence</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
+                            Current student at Tzu Chi University specializing in AI Agent creation and LLM fine-tuning via LoRA architecture. Fusing technical precision with hospitality excellence to build intelligent, human-centric systems.
+                        </p>
+<div class="flex flex-wrap gap-4 mt-4">
+<a class="bg-primary text-on-primary px-6 py-3 rounded hover:shadow-[0_0_15px_rgba(76,215,246,0.3)] transition-all font-code-sm text-code-sm inline-flex items-center gap-2" href="#ai-projects">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+                                View AI Projects
+                            </a>
+<a class="border border-outline text-on-surface px-6 py-3 rounded hover:bg-surface-variant hover:border-primary transition-colors font-code-sm text-code-sm inline-flex items-center gap-2 bg-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+                                Download Resume
+                            </a>
+</div>
+</div>
+<div class="hidden md:block col-span-4 flex justify-end">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden border border-outline-variant/30 glass-card">
+<img class="object-cover w-full h-full opacity-80 mix-blend-screen" data-alt="A highly detailed, cinematic photograph of a modern, glowing server rack or an abstract representation of a neural network in a sleek, minimalist tech environment. The lighting is high-contrast dark mode with intense electric indigo and cyan neon accents illuminating complex geometric nodes and pathways. The atmosphere feels like sophisticated artificial intelligence hardware meeting premium corporate architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs5fpbWVaxlOYCEPkC4lYiD7qOxVqmoRmWP_lz5r2F8gilMqnp7RdxjReByq3j_X_BFj_KqOMZlQavLf9SblkTxz7_jcbCajJSt7L_GET1Wvo4tkkfd8fytuG7xd_TIJWWOFm2gNAX7Y2gdbK8x1Jv3omnGrTt7ed2m_gvxtD86PnA1BnRkoz-5-B4Pm5gssL9wxJVRKwjLfZ84voE-K6oaT0OMPwbg58XRttYKZpHxo6FMMZrfwU8"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Research Showcase -->
+<section class="py-24 bg-surface-container-lowest relative" id="ai-projects">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-4">AI Research Showcase</h2>
+<div class="w-16 h-1 bg-primary rounded-full"></div>
+</div>
+<div class="grid grid-cols-4 md:grid-cols-12 gap-gutter">
+<!-- Featured Project -->
+<div class="col-span-4 md:col-span-12 glass-card rounded-xl p-8 project-card">
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="w-full md:w-1/2 rounded-lg overflow-hidden border border-outline-variant/20 relative aspect-video">
+<div class="bg-cover bg-center w-full h-full opacity-70" data-alt="An intricate, generative digital art piece representing a Large Language Model architecture. It features a dense, glowing web of interconnected nodes and data streams in a dark void. High-key electric blue and cyan colors highlight specific active pathways, simulating a neural network processing information. The aesthetic is extremely polished, tech-forward, and abstract, resembling a high-end corporate AI visualization." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAU-v4CExZAZ-7EwjoIrw_f59iWlp_MhNfnJTA6kuQexYlQu7WR9xz3yxElyU6fRL6TIo1TblIqkLRBKjEmlGzcD6wqKvYOK01ZRuccVC-VXtMyWXTLFGVjNzp9yhIhStfJJpvCswGiW8dvMwS44U4VfvYoz4DqbMgCbV-T9fw9litCoQFCVSNzOrOoU6DuuY_15HNnWiCFzL96DB8iC0HqkC7C58GRd1htOLbGO0vOsDdKQWCPSSCa')"></div>
+</div>
+<div class="w-full md:w-1/2 flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-tertiary border border-tertiary/30 px-3 py-1 rounded-full self-start bg-tertiary/10">LoRA ARCHITECTURE</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-background">Custom LLMs via Fine-tuning</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                                    Developing specialized "AI Agent Expert" personas utilizing Low-Rank Adaptation (LoRA) for efficient model fine-tuning. This architecture allows for rapid iteration of domain-specific knowledge while minimizing computational overhead.
+                                </p>
+<ul class="flex flex-col gap-2 mt-2 font-code-sm text-code-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="text-primary">+</span> Parameter-efficient tuning strategies</li>
+<li class="flex items-center gap-2"><span class="text-primary">+</span> Contextual memory orchestration</li>
+<li class="flex items-center gap-2"><span class="text-primary">+</span> Persona consistency alignment</li>
+</ul>
+<a class="text-primary hover:text-tertiary transition-colors mt-4 inline-flex items-center gap-1 font-code-sm text-code-sm" href="#">
+                                    View Repository <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Academic Background & Skills Grid -->
+<section class="py-24 relative" id="management">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-4 md:grid-cols-12 gap-gutter">
+<!-- Academic Context -->
+<div class="col-span-4 md:col-span-5 flex flex-col justify-center">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-4">Academic Synthesis</h2>
+<div class="w-16 h-1 bg-primary rounded-full mb-8"></div>
+<div class="glass-card rounded-lg p-6 border-l-2 border-l-tertiary">
+<h3 class="font-body-md text-body-md font-bold text-on-background">Tzu Chi University</h3>
+<p class="font-code-sm text-code-sm text-tertiary mb-4">International Service Industry Management</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                                Bridging the gap between human-centric service excellence and automated technical solutions. The curriculum emphasizes a unique perspective where AI acts as a deeply integrated service facilitator rather than just a standalone tool.
+                            </p>
+</div>
+</div>
+<!-- Skills Bento -->
+<div class="col-span-4 md:col-span-7 grid grid-cols-2 gap-4 mt-8 md:mt-0">
+<div class="glass-card rounded-lg p-6 flex flex-col gap-3">
+<span class="material-symbols-outlined text-primary text-3xl mb-2" data-icon="hub">hub</span>
+<h4 class="font-code-sm text-code-sm text-on-background">AI Agent Orchestration</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Designing autonomous systems.</p>
+</div>
+<div class="glass-card rounded-lg p-6 flex flex-col gap-3">
+<span class="material-symbols-outlined text-tertiary text-3xl mb-2" data-icon="model_training">model_training</span>
+<h4 class="font-code-sm text-code-sm text-on-background">LoRA Fine-tuning</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Efficient model adaptation.</p>
+</div>
+<div class="glass-card rounded-lg p-6 flex flex-col gap-3">
+<span class="material-symbols-outlined text-secondary text-3xl mb-2" data-icon="architecture">architecture</span>
+<h4 class="font-code-sm text-code-sm text-on-background">System Architecture</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Scalable deployment design.</p>
+</div>
+<div class="glass-card rounded-lg p-6 flex flex-col gap-3 bg-primary-container/10">
+<span class="material-symbols-outlined text-primary text-3xl mb-2" data-icon="handshake">handshake</span>
+<h4 class="font-code-sm text-code-sm text-on-background">Service Excellence</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Human-centric UX focus.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-12 border-t border-outline-variant/10 flat no shadows mt-auto" id="contact">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="font-label-caps text-label-caps text-on-surface-variant">
+                © 2024 Aliocy Antoine • Tzu Chi University
             </div>
-        </div>
-    </footer>
-</body>
-</html>
+<div class="flex gap-6">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-tertiary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center gap-1" href="#">
+                    LinkedIn
+                </a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-tertiary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center gap-1" href="#">
+                    GitHub
+                </a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-tertiary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center gap-1" href="#">
+                    Built with AI
+                </a>
+</div>
+</div>
+</footer>
+</body></html>
+
+<!-- Design System -->
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aliocy Antoine - Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-primary": "#494bd6",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "surface-tint": "#c0c1ff",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#233147",
+                        "surface-container-high": "#222a3d",
+                        "secondary-fixed-dim": "#b9c7e3",
+                        "outline": "#908fa0",
+                        "on-primary-container": "#0d0096",
+                        "on-primary": "#1000a9",
+                        "secondary-fixed": "#d5e3ff",
+                        "surface": "#0b1326",
+                        "on-secondary-fixed": "#0d1c31",
+                        "surface-dim": "#0b1326",
+                        "inverse-surface": "#dae2fd",
+                        "primary-fixed": "#e1e0ff",
+                        "on-secondary-container": "#abb9d5",
+                        "background": "#0b1326",
+                        "on-background": "#dae2fd",
+                        "tertiary-container": "#009eb9",
+                        "surface-container-lowest": "#060e20",
+                        "surface-container": "#171f33",
+                        "on-tertiary-fixed": "#001f26",
+                        "error-container": "#93000a",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "on-surface-variant": "#c7c4d7",
+                        "secondary": "#b9c7e3",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "on-secondary-fixed-variant": "#39475e",
+                        "surface-bright": "#31394d",
+                        "outline-variant": "#464554",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005",
+                        "tertiary": "#4cd7f6",
+                        "tertiary-fixed": "#acedff",
+                        "on-tertiary-container": "#002f38",
+                        "on-primary-fixed": "#07006c",
+                        "surface-variant": "#2d3449",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "surface-container-low": "#131b2e",
+                        "on-tertiary": "#003640",
+                        "secondary-container": "#3c4a61",
+                        "surface-container-highest": "#2d3449",
+                        "on-surface": "#dae2fd",
+                        "primary-container": "#8083ff",
+                        "inverse-on-surface": "#283044",
+                        "primary": "#c0c1ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "code-sm": ["JetBrains Mono"],
+                        "body-sm": ["Inter"],
+                        "headline-xl": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-caps": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "code-sm": ["13px", { "lineHeight": "18px", "fontWeight": "500" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Particle Background Effect */
+        .hero-bg {
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(192, 193, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(76, 215, 246, 0.05) 0%, transparent 50%);
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+        .hero-grid {
+            background-image: 
+                linear-gradient(to right, rgba(144, 143, 160, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(144, 143, 160, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+        }
+
+        /* Glass Card Hover */
+        .glass-card {
+            background: rgba(34, 42, 61, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(144, 143, 160, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(192, 193, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 0 20px rgba(192, 193, 255, 0.05);
+            transform: translateY(-4px);
+        }
+
+        .project-card {
+            border-top: 2px solid #c0c1ff;
+        }
+
+        /* AI Indicator Pulse */
+        @keyframes pulse-opacity {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .ai-pulse {
+            animation: pulse-opacity 2s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md shadow-sm border-b border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop h-20 flex justify-between items-center">
+<a class="font-headline-lg text-headline-lg text-primary tracking-tight" href="#">Aliocy Antoine</a>
+<div class="hidden md:flex gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 active:scale-95 transition-transform hover:text-primary transition-colors duration-300" href="#">Home</a>
+<a class="text-on-surface-variant font-medium active:scale-95 transition-transform hover:text-primary transition-colors duration-300" href="#profile">Profile</a>
+<a class="text-on-surface-variant font-medium active:scale-95 transition-transform hover:text-primary transition-colors duration-300" href="#education">Education &amp; Skills</a>
+<a class="text-on-surface-variant font-medium active:scale-95 transition-transform hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<button class="hidden md:flex bg-primary text-on-primary px-6 py-2 rounded font-code-sm text-code-sm hover:shadow-[0_0_15px_rgba(76,215,246,0.3)] transition-all">
+                Resume
+            </button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center pt-20 pb-32">
+<div class="hero-bg"></div>
+<div class="hero-grid"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full relative z-10">
+<div class="grid grid-cols-4 md:grid-cols-12 gap-gutter items-center">
+<div class="col-span-4 md:col-span-8 flex flex-col gap-6">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary ai-pulse shadow-[0_0_8px_#4cd7f6]"></span>
+<span class="font-label-caps text-label-caps text-tertiary">READY FOR IMPACT // OPEN TO OPPORTUNITIES</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-background">
+                            Aliocy Antoine:<br/>
+<span class="text-primary">Engineering Knowledge. Management Vision. International Perspective.</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed">
+                            A motivated professional bridging technical rigor from a Civil Engineering background with developing leadership and management capabilities at Tzu Chi University. Committed to building robust, human-centric solutions through a multidisciplinary lens.
+                        </p>
+<div class="flex flex-wrap gap-4 mt-4">
+<a class="bg-primary text-on-primary px-6 py-3 rounded hover:shadow-[0_0_15px_rgba(76,215,246,0.3)] transition-all font-code-sm text-code-sm inline-flex items-center gap-2" href="#profile">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+                                View Profile
+                            </a>
+<a class="border border-outline text-on-surface px-6 py-3 rounded hover:bg-surface-variant hover:border-primary transition-colors font-code-sm text-code-sm inline-flex items-center gap-2 bg-transparent" href="#">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+                                Download Resume
+                            </a>
+</div>
+</div>
+<div class="hidden md:block col-span-4 flex justify-end">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden border border-outline-variant/30 glass-card">
+<img class="object-cover w-full h-full opacity-80 mix-blend-screen" data-alt="A highly detailed, cinematic photograph of a modern, glowing server rack or an abstract representation of a neural network in a sleek, minimalist tech environment. The lighting is high-contrast dark mode with intense electric indigo and cyan neon accents illuminating complex geometric nodes and pathways. The atmosphere feels like sophisticated artificial intelligence hardware meeting premium corporate architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs5fpbWVaxlOYCEPkC4lYiD7qOxVqmoRmWP_lz5r2F8gilMqnp7RdxjReByq3j_X_BFj_KqOMZlQavLf9SblkTxz7_jcbCajJSt7L_GET1Wvo4tkkfd8fytuG7xd_TIJWWOFm2gNAX7Y2gdbK8x1Jv3omnGrTt7ed2m_gvxtD86PnA1BnRkoz-5-B4Pm5gssL9wxJVRKwjLfZ84voE-K6oaT0OMPwbg58XRttYKZpHxo6FMMZrfwU8"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interdisciplinary Journey Section -->
+<section class="py-24 bg-surface-container-lowest relative" id="profile">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-16">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-4">Interdisciplinary Journey</h2>
+<div class="w-16 h-1 bg-primary rounded-full"></div>
+</div>
+<div class="grid grid-cols-4 md:grid-cols-12 gap-gutter">
+<div class="col-span-4 md:col-span-12 glass-card rounded-xl p-8 project-card">
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="w-full md:w-1/2 flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-tertiary border border-tertiary/30 px-3 py-1 rounded-full self-start bg-tertiary/10">PROFESSIONAL GROWTH</span>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-background">From Engineering to Management</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                                    My career journey began with a strong foundation in Civil Engineering in the Dominican Republic, where I developed a systematic approach to complex challenges. Now pursuing International Service Industry Management in Taiwan, I am fusing my technical problem-solving skills with a deep understanding of human-centric leadership and global operations.
+                                </p>
+<ul class="flex flex-col gap-2 mt-2 font-code-sm text-code-sm text-on-surface-variant">
+<li class="flex items-center gap-2"><span class="text-primary">+</span> Analytical Problem Solver</li>
+<li class="flex items-center gap-2"><span class="text-primary">+</span> Team-Oriented Leader</li>
+<li class="flex items-center gap-2"><span class="text-primary">+</span> Cross-Cultural Collaborator</li>
+</ul>
+</div>
+<div class="w-full md:w-1/2 rounded-lg overflow-hidden border border-outline-variant/20 relative aspect-video">
+<div class="bg-cover bg-center w-full h-full opacity-70" data-alt="An intricate, generative digital art piece representing a Large Language Model architecture. It features a dense, glowing web of interconnected nodes and data streams in a dark void. High-key electric blue and cyan colors highlight specific active pathways, simulating a neural network processing information. The aesthetic is extremely polished, tech-forward, and abstract, resembling a high-end corporate AI visualization." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAU-v4CExZAZ-7EwjoIrw_f59iWlp_MhNfnJTA6kuQexYlQu7WR9xz3yxElyU6fRL6TIo1TblIqkLRBKjEmlGzcD6wqKvYOK01ZRuccVC-VXtMyWXTLFGVjNzp9yhIhStfJJpvCswGiW8dvMwS44U4VfvYoz4DqbMgCbV-T9fw9litCoQFCVSNzOrOoU6DuuY_15HNnWiCFzL96DB8iC0HqkC7C58GRd1htOLbGO0vOsDdKQWCPSSCa')"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Academic Background & Skills Grid -->
+<section class="py-24 relative" id="education">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-4 md:grid-cols-12 gap-gutter">
+<!-- Academic Context -->
+<div class="col-span-4 md:col-span-5 flex flex-col justify-center">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-4">Academic Synthesis</h2>
+<div class="w-16 h-1 bg-primary rounded-full mb-8"></div>
+<div class="glass-card rounded-lg p-6 border-l-2 border-l-tertiary">
+<h3 class="font-body-md text-body-md font-bold text-on-background">Tzu Chi University (Taiwan)</h3>
+<p class="font-code-sm text-code-sm text-tertiary mb-4">International Service Industry Management</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Focusing on Management, advanced Excel data modeling, and Leadership. Cultivating a strategic mindset to navigate and optimize complex global service environments.</p>
+</div><div class="glass-card rounded-lg p-6 border-l-2 border-l-primary mt-4"><h3 class="font-body-md text-body-md font-bold text-on-background">Civil Engineering Degree (DR)</h3><p class="font-code-sm text-code-sm text-primary mb-4">Engineering Foundations</p><p class="font-body-sm text-body-sm text-on-surface-variant">Provided the technical rigor, quantitative analysis skills, and structural problem-solving framework that underpin my approach to management optimization.</p></div>
+</div>
+<!-- Skills Bento -->
+<div class="col-span-4 md:col-span-7 grid grid-cols-2 gap-4 mt-8 md:mt-0">
+<div class="glass-card rounded-lg p-6 flex flex-col gap-3">
+<span class="material-symbols-outlined text-primary text-3xl mb-2" data-icon="groups">groups</span>
+<h4 class="font-code-sm text-code-sm text-on-background">Team Leadership</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Fostering collaborative excellence.</p>
+</div>
+<div class="glass-card rounded-lg p-6 flex flex-col gap-3">
+<span class="material-symbols-outlined text-tertiary text-3xl mb-2" data-icon="table_view">table_view</span>
+<h4 class="font-code-sm text-code-sm text-on-background">Advanced Excel</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Data modeling &amp; analysis.</p>
+</div>
+<div class="glass-card rounded-lg p-6 flex flex-col gap-3">
+<span class="material-symbols-outlined text-secondary text-3xl mb-2" data-icon="account_tree">account_tree</span>
+<h4 class="font-code-sm text-code-sm text-on-background">Project Management</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Structuring scalable processes.</p>
+</div>
+<div class="glass-card rounded-lg p-6 flex flex-col gap-3 bg-primary-container/10"><span class="material-symbols-outlined text-primary text-3xl mb-2" data-icon="public">public</span><h4 class="font-code-sm text-code-sm text-on-background">Cross-Cultural Operations</h4><p class="font-body-sm text-body-sm text-on-surface-variant text-xs">Bridging diverse global perspectives.</p></div>
+</div><div class="col-span-4 md:col-span-12 mt-12"><h3 class="font-label-caps text-label-caps text-tertiary mb-6">GLOBAL COMMUNICATION</h3><div class="grid grid-cols-2 md:grid-cols-5 gap-4"><div class="glass-card p-4 rounded-lg text-center"><div class="text-headline-lg mb-1">🇺🇸</div><div class="font-code-sm text-on-background">English</div><div class="text-xs text-tertiary">Native/Fluent</div></div><div class="glass-card p-4 rounded-lg text-center"><div class="text-headline-lg mb-1">🇭🇹</div><div class="font-code-sm text-on-background">Haitian Creole</div><div class="text-xs text-tertiary">Native/Fluent</div></div><div class="glass-card p-4 rounded-lg text-center"><div class="text-headline-lg mb-1">🇫🇷</div><div class="font-code-sm text-on-background">French</div><div class="text-xs text-tertiary">Native/Fluent</div></div><div class="glass-card p-4 rounded-lg text-center"><div class="text-headline-lg mb-1">🇪🇸</div><div class="font-code-sm text-on-background">Spanish</div><div class="text-xs text-tertiary">Native/Fluent</div></div><div class="glass-card p-4 rounded-lg text-center"><div class="text-headline-lg mb-1">🇨🇳</div><div class="font-code-sm text-on-background">Chinese</div><div class="text-xs text-tertiary">Intermediate</div></div></div></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-12 border-t border-outline-variant/10 flat no shadows mt-auto" id="contact">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="font-label-caps text-label-caps text-on-surface-variant">
+                © 2024 Aliocy Antoine • Tzu Chi University
+            </div>
+<div class="flex gap-6">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-tertiary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center gap-1" href="#">
+                    LinkedIn
+                </a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-tertiary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center gap-1" href="#">
+                    GitHub
+                </a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-tertiary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center gap-1" href="#">
+                    Built with AI
+                </a>
+</div>
+</div>
+</footer>
+</body></html>
