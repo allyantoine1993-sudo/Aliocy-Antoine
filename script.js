@@ -167,4 +167,48 @@ document.addEventListener("DOMContentLoaded", function () {
             mainMedia.load();
         }
     }
+
+    const likeButton = document.getElementById("likeButton");
+    const likeCount = document.getElementById("likeCount");
+    if (likeButton && likeCount) {
+        let likes = Number(likeCount.textContent.trim()) || 0;
+
+        likeButton.addEventListener("click", function () {
+            likes += 1;
+            likeCount.textContent = likes;
+            likeButton.classList.add("liked");
+            likeButton.setAttribute("aria-label", "Liked");
+        });
+    }
+
+    const commentForm = document.getElementById("commentForm");
+    const commentList = document.getElementById("commentList");
+    if (commentForm && commentList) {
+        commentForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const nameInput = document.getElementById("commentName");
+            const messageInput = document.getElementById("commentMessage");
+
+            if (!nameInput || !messageInput) return;
+
+            const name = nameInput.value.trim();
+            const message = messageInput.value.trim();
+
+            if (!name || !message) return;
+
+            const item = document.createElement("li");
+            item.className = "rounded-xl border border-outline-variant/20 bg-surface-container-low p-3";
+            item.innerHTML = `
+                <div class="flex items-center justify-between gap-2 mb-1">
+                    <strong class="font-code-sm text-code-sm text-on-background">${name}</strong>
+                    <span class="text-xs text-on-surface-variant">Just now</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">${message}</p>
+            `;
+
+            commentList.prepend(item);
+            commentForm.reset();
+        });
+    }
 });
