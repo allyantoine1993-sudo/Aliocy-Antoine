@@ -88,6 +88,21 @@ footer a {
     animation: pulse-opacity 2s infinite ease-in-out;
 }
 
+.fitness-stat {
+    box-shadow: inset 0 0 0 1px rgba(144, 143, 160, 0.08);
+}
+
+.fitness-card,
+.fitness-main-media {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fitness-card:hover,
+.fitness-main-media:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
 /* Mobile tweaks */
 @media (max-width: 767px) {
     /* Reduce hero height on small screens for better fold */

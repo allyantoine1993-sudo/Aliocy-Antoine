@@ -121,4 +121,50 @@ document.addEventListener("DOMContentLoaded", function () {
             mobileButton.focus();
         }
     });
+
+    const mediaInput = document.getElementById("fitnessMediaInput");
+    const gallery = document.getElementById("fitnessGallery");
+    const mediaCount = document.getElementById("fitnessMediaCount");
+    const mainMedia = document.querySelector(".fitness-main-media");
+
+    if (mediaInput && gallery) {
+        mediaInput.addEventListener("change", function (event) {
+            const files = Array.from(event.target.files || []);
+            if (!files.length) return;
+
+            files.forEach((file) => {
+                const figure = document.createElement("figure");
+                figure.className = "fitness-card overflow-hidden rounded-2xl border border-outline-variant/20 bg-surface-container-low";
+
+                if (file.type.startsWith("image/")) {
+                    const image = document.createElement("img");
+                    image.src = URL.createObjectURL(file);
+                    image.alt = file.name;
+                    image.className = "fitness-media h-64 w-full object-cover";
+                    figure.appendChild(image);
+                } else if (file.type.startsWith("video/")) {
+                    const video = document.createElement("video");
+                    video.src = URL.createObjectURL(file);
+                    video.controls = true;
+                    video.preload = "metadata";
+                    video.className = "fitness-media h-64 w-full object-cover";
+                    figure.appendChild(video);
+                }
+
+                gallery.prepend(figure);
+            });
+
+            const totalItems = gallery.querySelectorAll("figure").length;
+            if (mediaCount) mediaCount.textContent = totalItems + " item" + (totalItems === 1 ? "" : "s");
+
+            mediaInput.value = "";
+        });
+    }
+
+    if (mainMedia && mainMedia.tagName === "VIDEO") {
+        const source = mainMedia.querySelector("source");
+        if (source) {
+            mainMedia.load();
+        }
+    }
 });

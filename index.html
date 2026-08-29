@@ -284,6 +284,82 @@
 </div>
 </section>
 </main>
+
+<section id="fitness-life" class="py-24 bg-surface-container-lowest relative">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+            <div>
+                <p class="font-label-caps text-label-caps text-tertiary mb-3">FITNESS LIFE</p>
+                <h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background">My training journey and motivation</h2>
+            </div>
+            <label for="fitnessMediaInput" class="inline-flex cursor-pointer items-center gap-2 rounded-full border border-primary/60 bg-primary/10 px-4 py-2 text-sm font-medium text-primary hover:bg-primary hover:text-on-primary transition-all">
+                <span class="material-symbols-outlined text-base" data-icon="add_photo_alternate">add_photo_alternate</span>
+                Add photo / video
+            </label>
+            <input id="fitnessMediaInput" type="file" accept="image/*,video/*" multiple class="hidden" />
+        </div>
+
+        <div class="glass-card rounded-2xl p-5 md:p-8 overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-6 items-stretch">
+                <div class="rounded-2xl overflow-hidden border border-outline-variant/30 bg-surface-container">
+                    <video class="fitness-main-media w-full h-full object-cover aspect-video" controls poster="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80">
+                        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+                    </video>
+                </div>
+
+                <div class="flex flex-col justify-between gap-5">
+                    <div>
+                        <p class="font-label-caps text-label-caps text-primary mb-3">MOTIVATION</p>
+                        <h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-background mb-3">Train hard. Stay disciplined. Keep growing.</h3>
+                        <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                            This space is for my fitness journey, progress, and mindset. I share moments of training, recovery, and discipline to inspire others to keep moving forward.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-3 text-center">
+                        <div class="fitness-stat rounded-xl border border-outline-variant/20 bg-surface-container-low p-4">
+                            <div class="text-2xl font-bold text-primary">5x</div>
+                            <div class="text-xs text-on-surface-variant mt-1">weekly</div>
+                        </div>
+                        <div class="fitness-stat rounded-xl border border-outline-variant/20 bg-surface-container-low p-4">
+                            <div class="text-2xl font-bold text-primary">4.9</div>
+                            <div class="text-xs text-on-surface-variant mt-1">focus</div>
+                        </div>
+                        <div class="fitness-stat rounded-xl border border-outline-variant/20 bg-surface-container-low p-4">
+                            <div class="text-2xl font-bold text-primary">100%</div>
+                            <div class="text-xs text-on-surface-variant mt-1">mindset</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <div class="mb-4 flex items-center justify-between gap-3">
+                    <h3 class="font-label-caps text-label-caps text-primary">MEDIA GALLERY</h3>
+                    <span id="fitnessMediaCount" class="text-sm text-on-surface-variant">4 items</span>
+                </div>
+
+                <div id="fitnessGallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <figure class="fitness-card overflow-hidden rounded-2xl border border-outline-variant/20 bg-surface-container-low">
+                        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80" alt="Fitness training motivation" class="fitness-media h-64 w-full object-cover" />
+                    </figure>
+                    <figure class="fitness-card overflow-hidden rounded-2xl border border-outline-variant/20 bg-surface-container-low">
+                        <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=900&q=80" alt="Workout routine" class="fitness-media h-64 w-full object-cover" />
+                    </figure>
+                    <figure class="fitness-card overflow-hidden rounded-2xl border border-outline-variant/20 bg-surface-container-low">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=900&q=80" alt="Healthy fitness lifestyle" class="fitness-media h-64 w-full object-cover" />
+                    </figure>
+                    <figure class="fitness-card overflow-hidden rounded-2xl border border-outline-variant/20 bg-surface-container-low">
+                        <video class="fitness-media h-64 w-full object-cover" controls preload="metadata">
+                            <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+                        </video>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Footer -->
 <footer class="bg-surface-container-lowest w-full py-12 border-t border-outline-variant/10 flat no shadows mt-auto" id="contact">
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter">
@@ -303,6 +379,7 @@
 </div>
 </div>
 </footer>
+<script src="script.js"></script>
 </body></html>
 
 <!-- Aliocy Antoine | Portfolio Home -->
